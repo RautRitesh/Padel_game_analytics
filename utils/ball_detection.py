@@ -1,6 +1,8 @@
 from ultralytics import YOLO 
-model = YOLO("models/best.pt")
-result= model.track('input_vidoes/infernce_sample_video.mp4',
+#new ball detection yolo model
+model = YOLO(r"../models/best.pt")
+result= model.track(r'../input_videos/infernce_sample_video.mp4',conf=0.55,
+                    save=True,
                     project=r'C:\Users\RiteshRaut\Yolo\Padel_game_analytics\output_videos',
                     name='detect')
 
